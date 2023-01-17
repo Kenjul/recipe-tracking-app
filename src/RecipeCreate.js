@@ -27,6 +27,9 @@ function RecipeCreate({ createRecipe }) {
     setFormData({ ...initialFormState }); // resets all the inputs/textareas
   };
 
+
+
+  
   return (
     <form name="create" onSubmit={handleSubmit}>
       <table>
@@ -38,6 +41,7 @@ function RecipeCreate({ createRecipe }) {
                 name="name"
                 onChange={handleChange}
                 value={formData.content}
+                required
               />
             </td>
             <td>
@@ -46,6 +50,7 @@ function RecipeCreate({ createRecipe }) {
                 name="cuisine"
                 onChange={handleChange}
                 value={formData.content}
+                required
               />
             </td>
             <td>
@@ -54,6 +59,7 @@ function RecipeCreate({ createRecipe }) {
                 name="photo"
                 onChange={handleChange}
                 value={formData.content}
+                required
               />
             </td>
             <td>
@@ -62,6 +68,7 @@ function RecipeCreate({ createRecipe }) {
                 name="ingredients"
                 onChange={handleChange}
                 value={formData.content}
+                required
               />
             </td>
             <td>
@@ -70,6 +77,7 @@ function RecipeCreate({ createRecipe }) {
                 name="preparation"
                 onChange={handleChange}
                 value={formData.content}
+                required
               />
             </td>
             <td>
@@ -79,7 +87,7 @@ function RecipeCreate({ createRecipe }) {
         </tbody>
       </table>
     </form>
-  );
+    );
 }
 
 export default RecipeCreate;

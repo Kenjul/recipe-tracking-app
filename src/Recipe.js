@@ -1,14 +1,8 @@
 import React from "react";
 
-function Recipe({ recipe, index, deleteRecipe }) {
+function Recipe({ recipe, deleteRecipe }) {
   if (recipe) {
     const { name, cuisine, photo, ingredients, preparation } = recipe;
-
-    
-
-
-
-
 
     return (
       <>
@@ -24,7 +18,9 @@ function Recipe({ recipe, index, deleteRecipe }) {
           <p>{preparation}</p>
         </td>
         <td>
-          <button name="delete" onClick={() => deleteRecipe(recipe)}>Delete</button>
+          <button name="delete" onClick={() => deleteRecipe(recipe)}>
+            Delete
+          </button>
         </td>
       </>
     );

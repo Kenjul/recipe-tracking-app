@@ -8,7 +8,7 @@ import Recipe from "./Recipe";
 function RecipeList({ recipes, deleteRecipe }) {
   let recipeArr = recipes.map((recipe, index) => (
     <tr key={index}>
-      <Recipe recipe={recipe} index={index} deleteRecipe={deleteRecipe} />
+      <Recipe recipe={recipe} deleteRecipe={deleteRecipe} />
     </tr>
   ));
 
@@ -25,9 +25,7 @@ function RecipeList({ recipes, deleteRecipe }) {
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody>
-           {recipeArr}
-        </tbody>
+        <tbody>{recipeArr}</tbody>
       </table>
     </div>
   );
